@@ -1,6 +1,88 @@
 .App {
   text-align: center;
 }
+.Edit_header{
+}
+.Edit_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.Edit_right{
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.Edit_img_tree{
+  text-align: center;
+   width: 60%;
+    height: 100%;
+}
+
+.Edit_item1{
+  position: absolute;
+  top: 25%;
+  left: 46%;
+}
+.Edit_item2{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+.Edit_item3{
+  position: absolute;
+  top: 40%;
+  left: 52%;
+}
+.Edit_item4{
+  position: absolute;
+  top:55%;
+  left:34%;
+}
+.Edit_item5{
+  position: absolute;
+  top:55%;
+  left:46%;
+}
+.Edit_item6{
+  position: absolute;
+  top:55%;
+  left:58%;
+}
+.Edit_item7{
+  position: absolute;
+  top:70%;
+  left:28%;
+}
+.Edit_item8{
+  position: absolute;
+  top:70%;
+  left:40%;
+}
+.Edit_item9{
+  position: absolute;
+  top:70%;
+  left:52%;
+}.Edit_item10{
+  position: absolute;
+  top:70%;
+  left:64%;
+}
+
+
+.Edit_item_size{
+  width: 8%;
+  height: 8%;
+}
+
+.Edit_tree_item{
+  position: relative;
+}
+.Edit_items{
+  top: 70%;
+}
 
 .App-logo {
   height: 40vmin;
