@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TreeDecoList from './TreeDecoList';
+import SaveImage from './SaveImage';
 import './App.css';
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
           </div>
         </section>
         <section className="container">
+          <SaveImage />
           <TreeDecoList />
         </section>
       </div>
