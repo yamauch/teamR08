@@ -17,7 +17,7 @@ export default class TreeDecoList extends Component {
     render() {
         return (
             <ul>
-                {Object.entries(this.state.todos).map(([key, value]) => (
+                {Object.entries(this.state.decos).map(([key, value]) => (
                     <TreeDeco key={key} id={key} {...value} />
                 ))}
             </ul>
