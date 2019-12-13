@@ -32,6 +32,7 @@ function App(){
 export default App;
 
 function Edit(){
+  
   const[menucheck,setCheck] = React.useState(false);
   const [image_state,getImage] = React.useState(toumei);
   const [send_image,setImage] = React.useState(toumei);
@@ -48,7 +49,7 @@ function Edit(){
   function menuChange(){
     setCheck(!menucheck);
   }
-  
+
   return(
     <>
     <h1 className="Edit_header">これは編集画面です</h1>
