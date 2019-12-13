@@ -48,6 +48,7 @@ function Edit(){
   function menuChange(){
     setCheck(!menucheck);
   }
+  
   return(
     <>
     <h1 className="Edit_header">これは編集画面です</h1>
