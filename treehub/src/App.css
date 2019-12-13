@@ -14,7 +14,12 @@
   height: 100%;
   float: right;
 }
-
+.Edit_none{
+  float: none;
+}
+.Edit_absolute{
+  position: absolute;
+}
 .Edit_img_tree{
   text-align: center;
    width: 60%;
@@ -69,6 +74,15 @@
   position: absolute;
   top:70%;
   left:64%;
+}
+
+.Edit_menu_open{
+  height:100vh;
+  width:100px;
+  transition-duration: 1s;
+}
+.Edit_mmenu_close{
+  width: 0;
 }
 
 

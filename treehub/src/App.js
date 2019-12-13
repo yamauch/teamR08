@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { RSA_PKCS1_OAEP_PADDING } from 'constants';
 import {BrowserRouter,Route,Link} from 'react-router-dom';
@@ -7,6 +6,8 @@ import { render } from '@testing-library/react';
 import tree from './images/tree.jpg';
 import ccc from './images/ccc.jpg';
 import { array, string } from 'prop-types';
+
+var images = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc);
 
 function Edit(){
   return(
@@ -16,25 +17,42 @@ function Edit(){
     <section className="Edit_left">
       <div className="Edit_tree_item">
         <img src={tree}className="Edit_img_tree"></img>
-        <img src={ccc}className="Edit_item_size Edit_item1"></img>
-        <img src={ccc}className="Edit_item_size Edit_item2"></img>
-        <img src={ccc}className="Edit_item_size Edit_item3"></img>
-        <img src={ccc}className="Edit_item_size Edit_item4"></img>
-        <img src={ccc}className="Edit_item_size Edit_item5"></img>
-        <img src={ccc}className="Edit_item_size Edit_item6"></img>
-        <img src={ccc}className="Edit_item_size Edit_item7"></img>
-        <img src={ccc}className="Edit_item_size Edit_item8"></img>
-        <img src={ccc}className="Edit_item_size Edit_item9"></img>
-        <img src={ccc}className="Edit_item_size Edit_item10"></img>
+        <img src={images[0]}className="Edit_item_size Edit_item1"></img>
+        <img src={images[1]}className="Edit_item_size Edit_item2"></img>
+        <img src={images[2]}className="Edit_item_size Edit_item3"></img>
+        <img src={images[3]}className="Edit_item_size Edit_item4"></img>
+        <img src={images[4]}className="Edit_item_size Edit_item5"></img>
+        <img src={images[5]}className="Edit_item_size Edit_item6"></img>
+        <img src={images[6]}className="Edit_item_size Edit_item7"></img>
+        <img src={images[7]}className="Edit_item_size Edit_item8"></img>
+        <img src={images[8]}className="Edit_item_size Edit_item9"></img>
+        <img src={images[9]}className="Edit_item_size Edit_item10"></img>
       </div>
     </section>
 
     <section className="Edit_right">
-      <img src={tree} className="Edit_img_tree"></img>
+      <div className="Edit_tree_item">
+        <img src={tree}className="Edit_img_tree"></img>
+        <img src={images[0]}className="Edit_item_size Edit_item1"></img>
+        <img src={images[1]}className="Edit_item_size Edit_item2"></img>
+        <img src={images[2]}className="Edit_item_size Edit_item3"></img>
+        <img src={images[3]}className="Edit_item_size Edit_item4"></img>
+        <img src={images[4]}className="Edit_item_size Edit_item5"></img>
+        <img src={images[5]}className="Edit_item_size Edit_item6"></img>
+        <img src={images[6]}className="Edit_item_size Edit_item7"></img>
+        <img src={images[7]}className="Edit_item_size Edit_item8"></img>
+        <img src={images[8]}className="Edit_item_size Edit_item9"></img>
+        <img src={images[9]}className="Edit_item_size Edit_item10"></img>
+        <div>
+          <button className="Edit_menu_close Edit_none">menu</button>
+        </div>
+      </div>
     </section>
     </>
   );
 }
+
+
 
 function App(){
   return(
@@ -52,24 +70,4 @@ function App(){
     </div>
   );
 }
-
-
-/*
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
-
-*/
-    export default App;
+export default App;
