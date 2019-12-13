@@ -37,12 +37,12 @@ function Edit(){
   const [image_state,getImage] = React.useState(toumei);
   const [send_image,setImage] = React.useState(toumei);
   
-  function click_recieve(i) {//iが配列の番号
+  function click_recieve(i) {//受け取りの関数。iが配列の番号
     getImage(images[i]);
     console.log(image_state);
   }
   
-  function click_send(){
+  function click_send(){//渡すときの関数。
     setImage(image_state);
   }
 
