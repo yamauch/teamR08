@@ -17,9 +17,7 @@
 .Edit_none{
   float: none;
 }
-.Edit_absolute{
-  position: absolute;
-}
+
 .Edit_img_tree{
   text-align: center;
    width: 60%;
@@ -77,15 +75,20 @@
 }
 
 .Edit_menu_open{
-  height:100vh;
-  width:100px;
-  transition-duration: 1s;
+  width:80%;
 }
-.Edit_mmenu_close{
+.Edit_menu_close{
   width: 0;
 }
-
-
+.Edit_itembox{
+  position: absolute;
+  list-style-type: none;
+  top: 20%;
+}
+.Edit_menu_img{
+  width: 30%;
+  height: 15%;
+}
 .Edit_item_size{
   width: 8%;
   height: 8%;
@@ -94,8 +97,28 @@
 .Edit_tree_item{
   position: relative;
 }
-.Edit_items{
-  top: 70%;
+
+.items_before{
+  position: absolute;
+  background-color: #FF99CC;
+  color:black;
+  text-orientation: upright;
+  font-size: 15%;
+  top: 40%;
+  left: 5%;
+  width: 15%;
+  height: 25%;
+}
+.items_after{
+  position: absolute;
+  background-color: #FF99CC;
+  color:black;
+  text-orientation: upright;
+  font-size: 15%;
+  top: 40%;
+  left: 90%;
+  width: 15%;
+  height: 25%;
 }
 
 .App-logo {
