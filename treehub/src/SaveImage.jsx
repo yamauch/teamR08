@@ -1,3 +1,4 @@
+//画像を保存するコンポーネント
 import React, { Component } from 'react';
 import { firebaseDb } from './firebase';
 

@@ -1,3 +1,4 @@
+//ツリーにされたデコレーションアイテムを保持するコンポーネント
 import React, { Component } from 'react';
 import TreeDeco from './TreeDeco';
 import { firebaseDb } from './firebase';
