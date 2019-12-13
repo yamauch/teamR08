@@ -4,12 +4,12 @@ import './App.css';
 import image from './images/joucho_fuantei_man.png';
 import image2 from './images/jk.png';
 import toumei from './images/toumei.png';
-var images = new Array(image,image2);
+var images = new Array(image,image2);//画像を格納
 function App() {
   const [image_state,getImage] = React.useState(toumei);
   const [send_image,setImage] = React.useState(toumei);
   
-  function click_recieve(i) {
+  function click_recieve(i) {//iが配列の番号
     getImage(images[i]);
     console.log(image_state);
   }
