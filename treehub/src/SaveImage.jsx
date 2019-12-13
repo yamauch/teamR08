@@ -40,7 +40,6 @@ export default class SaveImage extends Component {
     }
 
     render() {
-        const { top, firstLeft, firstRight, secondLeft, secondMiddle, secondRight, bottomLeft, bottomMidLeft, bottomMidRight, bottomRight } = this.state;
         return (
             <div className="container">
                 <div className="field">
@@ -125,13 +124,9 @@ export default class SaveImage extends Component {
                 </div>
 
                 <div className="control">
-                    {/* {top &&
-                        middle &&
-                            bottom && ( */}
-                                <button className="button is-link" onClick={this.onClick}>
-                                    Save
-                                </button>
-                            {/* )} */}
+                    <button className="button is-link" onClick={this.onClick}>
+                        Save
+                        </button>
                 </div>
             </div>
         );
