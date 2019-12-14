@@ -11,7 +11,8 @@ import jk from './images/jk.png';
 import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 import MenuButton from './images/MenuButton.jpg';
-import SaveButton from './images/SaveButton.jpg';
+import SaveButton from './images/SaveButton.png';
+import EditBack from './images/EditBack.jpg';
 /*
 import bell from './images/bell.png';
 import flurt from './images/flurt.png';
@@ -88,7 +89,9 @@ function Edit(){
 
   return(
     <>
-    <h1>TreeHub</h1>
+    <div className="EditHeader">
+      <h1>TreeHub</h1>
+    </div>
     <section className="Edit_left">
       <div className="Edit_tree_item">{/*position:relation*/}
         <img src={tree}className="Edit_img_tree"></img>

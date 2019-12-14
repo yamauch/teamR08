@@ -1,11 +1,16 @@
 .App {
   text-align: center;
 }
+.EditHeader{
+  background-image: url(./images/EditBack.jpg);
+}
 h1 {
+  background-color: azure;
   width: 40%;
   left: 30%;
   position: relative;
   padding: 0.25em 1em;
+  margin: 0;
   border: solid 2px black;
   border-radius: 3px 0 3px 0;
 }
@@ -17,6 +22,7 @@ h1:before, h1:after {
   height: 10px;
   border: solid 2px black;
   border-radius: 50%;
+  background-color: azure;
 }
 
 h1:after {
@@ -27,13 +33,18 @@ h1:before {
   bottom:-12px;
   right:-12px;
 }
+
 .Edit_left{
+  background-image: url(./images/EditBack.jpg);
+  background-size: 100%;
   width: 50%;
   height: 100%;
   float: left;
 }
 
 .Edit_right{
+  background-image: url(./images/EditBack.jpg);
+  background-size: 100%;
   width: 50%;
   height: 100%;
   float: right;
@@ -44,8 +55,8 @@ h1:before {
 
 .Edit_img_tree{
   text-align: center;
-   width: 100%;
-    height: 100%;
+   width: 70%;
+    height: 90%;
 }
 
 .Edit_item1{
@@ -157,13 +168,13 @@ h1:before {
   flex-wrap: wrap;
   width: 100%;
   top: 20%;
-  left: 10%;
+  left: 8%;
 }
 .Edit_menu_open{
   width:50%;
   height: 100%;
   left: 0;
-  background: #f1f8ff;
+  background-color: white;
   border: dashed 2px #668ad8;
   border-radius: 8px;
 }
