@@ -1,4 +1,4 @@
- 
+import {firebaseDb} from './firebase'
 import React, { Component } from 'react';
 import './App.css';
 import { RSA_PKCS1_OAEP_PADDING } from 'constants';
@@ -10,7 +10,7 @@ import joucho from './images/joucho_fuantei_man.png';
 import jk from './images/jk.png';
 import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
-
+import SaveImage from './SaveImage';
 var images = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
 function App(){
   return(
@@ -52,6 +52,7 @@ function Edit(){
   
   function top_send(){//渡すときの関数。
     setTop(image_state);
+    //SaveImage.state.top = image_state;
   }
   function firstL_send(){
     setFL(image_state);
@@ -84,6 +85,7 @@ function Edit(){
     setCheck(!menucheck);
   }
 
+ 
   return(
     <>
     <h1 className="Edit_header">これは編集画面です</h1>
@@ -149,6 +151,9 @@ function Edit(){
         <button onClick = {bottomR_send}>
           <img src={bottomR}className="Edit_item_size Edit_item10"></img>
         </button>
+        {/* <button onClick = {saveDatabase}>
+          Save
+        ></button> */}
       </div>
     </section>
     </>
@@ -158,4 +163,20 @@ function Edit(){
 
 
 
-
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div className="app">
+//         <section className="hero container is-info">
+//           <div className="hero-body">
+//             <h1 className="title">Treehub</h1>
+//           </div>
+//         </section>
+//         <section className="container">
+//           <SaveImage />
+//           <TreeDecoList />
+//         </section>
+//       </div>
+//     );
+//   }
+// }
