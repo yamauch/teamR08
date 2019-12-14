@@ -12,11 +12,19 @@ import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 import MenuButton from './images/MenuButton.jpg';
 import SaveButton from './images/SaveButton.jpg';
+import bell from './images/bell.png';
+import flurt from './images/flurt.png';
+import lease from './images/lease.png';
+import santahat from './images/santahat.png';
+import snowman from './images/snowman.png';
+import socks from './images/socks.png';
+import present from './images/present.png';
+import belllease from './images/belllease.png';
 
 
 var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
 var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
-var MenuImages = new Array(SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton);
+var MenuImages = new Array(bell,flurt,lease,santahat,snowman,socks,present,belllease,SaveButton,SaveButton);
 
 
 function Edit(){
@@ -97,7 +105,13 @@ function Edit(){
           <ul className={`${menucheck ? 'Edit_menu_open Edit_itembox':'Edit_menu_close Edit_itembox'}`}>
             <li><input type="image" src={MenuImages[0]} className="Edit_menu_img" onClick = { () => click_recieve(0)}></input></li>
             <li><input type="image" src={MenuImages[1]} className="Edit_menu_img" onClick = { () => click_recieve(1)}></input></li>
-            <li><input type="image" src={MenuImages[2]} className="Edit_menu_img"onClick = { () => click_recieve(2)}></input></li>             
+            <li><input type="image" src={MenuImages[2]} className="Edit_menu_img"onClick = { () => click_recieve(2)}></input></li>   
+            <li><input type="image" src={MenuImages[3]} className="Edit_menu_img"onClick = { () => click_recieve(3)}></input></li>  
+            <li><input type="image" src={MenuImages[4]} className="Edit_menu_img" onClick = { () => click_recieve(4)}></input></li>
+            <li><input type="image" src={MenuImages[5]} className="Edit_menu_img" onClick = { () => click_recieve(5)}></input></li>
+            <li><input type="image" src={MenuImages[6]} className="Edit_menu_img"onClick = { () => click_recieve(6)}></input></li>   
+            <li><input type="image" src={MenuImages[7]} className="Edit_menu_img"onClick = { () => click_recieve(7)}></input></li>            
+          
           </ul>
           <input  type="image" src={MenuButton} className={`${menucheck ? 'MenuButton_after':'MenuButton_before'}`} onClick ={menuChange} ></input>
          </div>
