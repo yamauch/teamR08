@@ -12,6 +12,7 @@ import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 import MenuButton from './images/MenuButton.jpg';
 import SaveButton from './images/SaveButton.jpg';
+/*
 import bell from './images/bell.png';
 import flurt from './images/flurt.png';
 import lease from './images/lease.png';
@@ -20,11 +21,12 @@ import snowman from './images/snowman.png';
 import socks from './images/socks.png';
 import present from './images/present.png';
 import belllease from './images/belllease.png';
-
-
-var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
 var MenuImages = new Array(bell,flurt,lease,santahat,snowman,socks,present,belllease,SaveButton,SaveButton);
+*/
+var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
+var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
+var MenuImages = new Array(SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton)
+
 
 
 function Edit(){
