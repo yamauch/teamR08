@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { RSA_PKCS1_OAEP_PADDING } from 'constants';
-import {BrowserRouter,Route,Link} from 'react-router-dom';
+import {BrowserRouter,Route,Link,withRouter} from 'react-router-dom';
 import { render } from '@testing-library/react';
 import tree from './images/tree.jpg';
 import ccc from './images/ccc.jpg';
@@ -10,43 +10,35 @@ import joucho from './images/joucho_fuantei_man.png';
 import jk from './images/jk.png';
 import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
+import MenuButton from './images/MenuButton.jpg';
+import SaveButton from './images/SaveButton.jpg';
 
-var images = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-function App(){
-  return(
-    <div className="App">
-      <BrowserRouter>
-      <Route exact path ='/'>
-        <Link to='/Edit'>
-          編集画面へ
-        </Link>
-      </Route>
-        <Route exact path='/Edit'>
-          <Edit />
-      </Route>
-      </BrowserRouter>
-    </div>
-  );
-}
-export default App;
+
+var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
+var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
+var MenuImages = new Array(SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton);
+
 
 function Edit(){
   
-  const[menucheck,setCheck] = React.useState(false);
+  const[menucheck,setCheck] = React.useState(false);//メニューのオンオフを切り替えるboolean
+
   const [image_state,getImage] = React.useState(toumei);
-  const [top,setTop] = React.useState(toumei);
-  const [firstL,setFL] = React.useState(toumei);
-  const [firstR,setFR] = React.useState(toumei);
-  const [secondL,setSL] = React.useState(toumei);
-  const [secondM,setSM] = React.useState(toumei);
-  const [secondR,setSR] = React.useState(toumei);
-  const [bottomL,setBL] = React.useState(toumei);
-  const [bottomML,setBML] = React.useState(toumei);
-  const [bottomMR,setBMR] = React.useState(toumei);
-  const [bottomR,setBR] = React.useState(toumei);
+
+  const [top,setTop] = React.useState(DataImages[0]);
+  const [firstL,setFL] = React.useState(DataImages[1]);
+  const [firstR,setFR] = React.useState(DataImages[2]);
+  const [secondL,setSL] = React.useState(DataImages[3]);
+  const [secondM,setSM] = React.useState(DataImages[4]);
+  const [secondR,setSR] = React.useState(DataImages[5]);
+  const [bottomL,setBL] = React.useState(DataImages[6]);
+  const [bottomML,setBML] = React.useState(DataImages[7]);
+  const [bottomMR,setBMR] = React.useState(DataImages[8]);
+  const [bottomR,setBR] = React.useState(DataImages[9]);
   
+
   function click_recieve(i) {//受け取りの関数。iが配列の番号
-    getImage(images[i]);
+    getImage(MenuImages[i]);
     console.log(image_state);
   }
   
@@ -86,76 +78,67 @@ function Edit(){
 
   return(
     <>
-    <h1 className="Edit_header">これは編集画面です</h1>
+    <h1>TreeHub</h1>
     <section className="Edit_left">
       <div className="Edit_tree_item">{/*position:relation*/}
         <img src={tree}className="Edit_img_tree"></img>
-        <img src={images[0]}className="Edit_item_size Edit_item1"></img>
-        <img src={images[1]}className="Edit_item_size Edit_item2"></img>
-        <img src={images[2]}className="Edit_item_size Edit_item3"></img>
-        <img src={images[3]}className="Edit_item_size Edit_item4"></img>
-        <img src={images[4]}className="Edit_item_size Edit_item5"></img>
-        <img src={images[5]}className="Edit_item_size Edit_item6"></img>
-        <img src={images[6]}className="Edit_item_size Edit_item7"></img>
-        <img src={images[7]}className="Edit_item_size Edit_item8"></img>
-        <img src={images[8]}className="Edit_item_size Edit_item9"></img>
-        <img src={images[9]}className="Edit_item_size Edit_item10"></img>
-        <button className={`${menucheck ? 'items_after':'items_before'}`} onClick ={menuChange} >かざり</button>
-        <article >
+
+        <img src={DataImages[0]}className="Edit_item1"></img>
+        <img src={DataImages[1]}className="Edit_item2"></img>
+        <img src={DataImages[2]}className="Edit_item3"></img>
+        <img src={DataImages[3]}className="Edit_item4"></img>
+        <img src={DataImages[4]}className="Edit_item5"></img>
+        <img src={DataImages[5]}className="Edit_item6"></img>
+        <img src={DataImages[6]}className="Edit_item7"></img>
+        <img src={DataImages[7]}className="Edit_item8"></img>
+        <img src={DataImages[8]}className="Edit_item9"></img>
+        <img src={DataImages[9]}className="Edit_item10"></img>
+        <div className="Menu"> 
           <ul className={`${menucheck ? 'Edit_menu_open Edit_itembox':'Edit_menu_close Edit_itembox'}`}>
-            <button onClick = { () => click_recieve(11)}>
-            <li><img src={images[11]} className="Edit_menu_img"></img></li>
-            </button>
-            <button onClick = {() => click_recieve(12)}>
-            <li><img src={images[12]} className="Edit_menu_img"></img></li>
-            </button>
-            <li><img src={images[0]} className="Edit_menu_img"></img></li>
+            <li><input type="image" src={MenuImages[0]} className="Edit_menu_img" onClick = { () => click_recieve(0)}></input></li>
+            <li><input type="image" src={MenuImages[1]} className="Edit_menu_img" onClick = { () => click_recieve(1)}></input></li>
+            <li><input type="image" src={MenuImages[2]} className="Edit_menu_img"onClick = { () => click_recieve(2)}></input></li>             
           </ul>
-        </article>
+          <input  type="image" src={MenuButton} className={`${menucheck ? 'MenuButton_after':'MenuButton_before'}`} onClick ={menuChange} ></input>
+         </div>
       </div>
-      
     </section>
     
     <section className="Edit_right">
       <div className="Edit_tree_item">
         <img src={tree}className="Edit_img_tree"></img>
-        <button onClick = {top_send}>
-          <img src={top}className="Edit_item_size Edit_item1"></img>
-        </button>
-        <button onClick = {firstL_send}>
-          <img src={firstL}className="Edit_item_size Edit_item2"></img>
-        </button>
-        <button onClick = {firstR_send}>
-          <img src={firstR}className="Edit_item_size Edit_item3"></img>
-        </button>
-        <button onClick = {secondL_send}>
-          <img src={secondL}className="Edit_item_size Edit_item4"></img>
-        </button>
-        <button onClick = {secondM_send}>
-          <img src={secondM}className="Edit_item_size Edit_item5"></img>
-        </button>
-        <button onClick = {secondR_send}>
-          <img src={secondR}className="Edit_item_size Edit_item6"></img>
-        </button>
-        <button onClick = {bottomL_send}>
-          <img src={bottomL}className="Edit_item_size Edit_item7"></img>
-        </button>
-        <button onClick = {bottomML_send}>
-          <img src={bottomML}className="Edit_item_size Edit_item8"></img>
-        </button>
-        <button onClick = {bottomMR_send}>
-          <img src={bottomMR}className="Edit_item_size Edit_item9"></img>
-        </button>
-        <button onClick = {bottomR_send}>
-          <img src={bottomR}className="Edit_item_size Edit_item10"></img>
-        </button>
+
+        <input type="image" src={top} className="Edit_item1" onClick = {top_send}></input>
+        <input type="image" src={firstL} className="Edit_item2" onClick = {firstL_send}></input>
+        <input type="image" src={firstR} className="Edit_item3" onClick = {firstR_send}></input>
+        <input type="image" src={secondL} className="Edit_item4" onClick = {secondL_send}></input>
+        <input type="image" src={secondM} className="Edit_item5" onClick = {secondM_send}></input>
+        <input type="image" src={secondR} className="Edit_item6" onClick = {secondR_send}></input>
+        <input type="image" src={bottomL} className="Edit_item7" onClick = {bottomL_send}></input>
+        <input type="image" src={bottomML} className="Edit_item8" onClick = {bottomML_send}></input>
+        <input type="image" src={bottomMR} className="Edit_item9" onClick = {bottomMR_send}></input>
+        <input type="image" src={bottomR} className="Edit_item10" onClick = {bottomR_send}></input>
+
       </div>
     </section>
     </>
   );
 }
+function App(){
+  return(
+    <div className="App">
+      <BrowserRouter>
+        <Route exact path ='/'>
+          <Link to='/Edit'>編集画面へ</Link>
+        </Route>
+        <Route exact path='/Edit'>
+          <Edit />
+        </Route>
+      </BrowserRouter>
 
-
-
+    </div>
+  );
+}
+export default App;
 
 
