@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { RSA_PKCS1_OAEP_PADDING } from 'constants';
-import {BrowserRouter,Route,Link} from 'react-router-dom';
+import {BrowserRouter,Route,Link,withRouter} from 'react-router-dom';
 import { render } from '@testing-library/react';
 import tree from './images/tree.jpg';
 import ccc from './images/ccc.jpg';
@@ -15,7 +15,7 @@ import SaveButton from './images/SaveButton.jpg';
 
 
 var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-var SaveImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
+var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
 var MenuImages = new Array(SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton);
 
 
@@ -25,16 +25,16 @@ function Edit(){
 
   const [image_state,getImage] = React.useState(toumei);
 
-  const [top,setTop] = React.useState(SaveImages[0]);
-  const [firstL,setFL] = React.useState(SaveImages[1]);
-  const [firstR,setFR] = React.useState(SaveImages[2]);
-  const [secondL,setSL] = React.useState(SaveImages[3]);
-  const [secondM,setSM] = React.useState(SaveImages[4]);
-  const [secondR,setSR] = React.useState(SaveImages[5]);
-  const [bottomL,setBL] = React.useState(SaveImages[6]);
-  const [bottomML,setBML] = React.useState(SaveImages[7]);
-  const [bottomMR,setBMR] = React.useState(SaveImages[8]);
-  const [bottomR,setBR] = React.useState(SaveImages[9]);
+  const [top,setTop] = React.useState(DataImages[0]);
+  const [firstL,setFL] = React.useState(DataImages[1]);
+  const [firstR,setFR] = React.useState(DataImages[2]);
+  const [secondL,setSL] = React.useState(DataImages[3]);
+  const [secondM,setSM] = React.useState(DataImages[4]);
+  const [secondR,setSR] = React.useState(DataImages[5]);
+  const [bottomL,setBL] = React.useState(DataImages[6]);
+  const [bottomML,setBML] = React.useState(DataImages[7]);
+  const [bottomMR,setBMR] = React.useState(DataImages[8]);
+  const [bottomR,setBR] = React.useState(DataImages[9]);
   
 
   function click_recieve(i) {//受け取りの関数。iが配列の番号
@@ -83,16 +83,16 @@ function Edit(){
       <div className="Edit_tree_item">{/*position:relation*/}
         <img src={tree}className="Edit_img_tree"></img>
 
-        <img src={SaveImages[0]}className="Edit_item1"></img>
-        <img src={SaveImages[1]}className="Edit_item2"></img>
-        <img src={SaveImages[2]}className="Edit_item3"></img>
-        <img src={SaveImages[3]}className="Edit_item4"></img>
-        <img src={SaveImages[4]}className="Edit_item5"></img>
-        <img src={SaveImages[5]}className="Edit_item6"></img>
-        <img src={SaveImages[6]}className="Edit_item7"></img>
-        <img src={SaveImages[7]}className="Edit_item8"></img>
-        <img src={SaveImages[8]}className="Edit_item9"></img>
-        <img src={SaveImages[9]}className="Edit_item10"></img>
+        <img src={DataImages[0]}className="Edit_item1"></img>
+        <img src={DataImages[1]}className="Edit_item2"></img>
+        <img src={DataImages[2]}className="Edit_item3"></img>
+        <img src={DataImages[3]}className="Edit_item4"></img>
+        <img src={DataImages[4]}className="Edit_item5"></img>
+        <img src={DataImages[5]}className="Edit_item6"></img>
+        <img src={DataImages[6]}className="Edit_item7"></img>
+        <img src={DataImages[7]}className="Edit_item8"></img>
+        <img src={DataImages[8]}className="Edit_item9"></img>
+        <img src={DataImages[9]}className="Edit_item10"></img>
         <div className="Menu"> 
           <ul className={`${menucheck ? 'Edit_menu_open Edit_itembox':'Edit_menu_close Edit_itembox'}`}>
             <li><input type="image" src={MenuImages[0]} className="Edit_menu_img" onClick = { () => click_recieve(0)}></input></li>
@@ -128,21 +128,17 @@ function App(){
   return(
     <div className="App">
       <BrowserRouter>
-      <Route exact path ='/'>
-        <Link to='/Edit'>
-          編集画面へ
-        </Link>
-      </Route>
+        <Route exact path ='/'>
+          <Link to='/Edit'>編集画面へ</Link>
+        </Route>
         <Route exact path='/Edit'>
           <Edit />
-      </Route>
+        </Route>
       </BrowserRouter>
+
     </div>
   );
 }
 export default App;
-
-
-
 
 
