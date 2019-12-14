@@ -12,7 +12,7 @@ import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 
 var images = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-
+var treeImage = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
 function App(){
   return(
     <div className="App">
@@ -35,15 +35,16 @@ function Edit(){
   
   const[menucheck,setCheck] = React.useState(false);
   const [image_state,getImage] = React.useState(toumei);
-  const [send_image,setImage] = React.useState(toumei);
+  const [treeImage,setImage] = React.useState(Array(10).fill(toumei));
   
   function click_recieve(i) {//受け取りの関数。iが配列の番号
     getImage(images[i]);
     console.log(image_state);
   }
   
-  function click_send(){//渡すときの関数。
-    setImage(image_state);
+  function click_send(i){//渡すときの関数。
+    treeImage[i] = image_state;
+    setImage(treeImage[i]);
   }
 
   function menuChange(){
@@ -72,7 +73,9 @@ function Edit(){
             <button onClick = { () => click_recieve(11)}>
             <li><img src={images[11]} className="Edit_menu_img"></img></li>
             </button>
+            <button onClick = {() => click_recieve(12)}>
             <li><img src={images[12]} className="Edit_menu_img"></img></li>
+            </button>
             <li><img src={images[0]} className="Edit_menu_img"></img></li>
           </ul>
         </article>
@@ -83,10 +86,12 @@ function Edit(){
     <section className="Edit_right">
       <div className="Edit_tree_item">
         <img src={tree}className="Edit_img_tree"></img>
-        <button onClick = {click_send}>
-        <img src={send_image}className="Edit_item_size Edit_item1"></img>
+        <button onClick = { () =>click_send(0)}>
+        <img src={treeImage[0]}className="Edit_item_size Edit_item1"></img>
         </button>
-        <img src={images[10]}className="Edit_item_size Edit_item2"></img>
+        <button onClick = {() => click_send(1)}>
+        <img src={treeImage[1]}className="Edit_item_size Edit_item2"></img>
+        </button>
         <img src={images[10]}className="Edit_item_size Edit_item3"></img>
         <img src={images[10]}className="Edit_item_size Edit_item4"></img>
         <img src={images[10]}className="Edit_item_size Edit_item5"></img>
