@@ -1,7 +1,45 @@
 .App {
   text-align: center;
 }
-.Edit_header{
+.Home_EditBurron {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #00bcd4;
+  transition: .4s;
+}
+
+.Home_EditBurron:hover {
+  background: #1ec7bb;
+}
+h1 {
+  width: 40%;
+  left: 30%;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px black;
+  border-radius: 3px 0 3px 0;
+}
+
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px black;
+  border-radius: 50%;
+}
+
+h1:after {
+  top:-12px;
+  left:-12px;
+}
+h1:before {
+  bottom:-12px;
+  right:-12px;
 }
 .Edit_left{
   width: 50%;
@@ -28,103 +66,138 @@
   position: absolute;
   top: 25%;
   left: 46%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item2{
   position: absolute;
   top: 40%;
   left: 40%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item3{
   position: absolute;
   top: 40%;
   left: 52%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item4{
   position: absolute;
   top:55%;
   left:34%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item5{
   position: absolute;
   top:55%;
   left:46%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item6{
   position: absolute;
   top:55%;
   left:58%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item7{
   position: absolute;
   top:70%;
   left:28%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item8{
   position: absolute;
   top:70%;
   left:40%;
+  width: 8%;
+  height: 8%;
 }
 .Edit_item9{
   position: absolute;
   top:70%;
   left:52%;
-}.Edit_item10{
+  width: 8%;
+  height: 8%;
+}
+.Edit_item10{
   position: absolute;
   top:70%;
   left:64%;
-}
-
-.Edit_menu_open{
-  width:80%;
-}
-.Edit_menu_close{
-  width: 0;
-}
-.Edit_itembox{
-  position: absolute;
-  list-style-type: none;
-  top: 20%;
-}
-.Edit_menu_img{
-  width: 30%;
-  height: 15%;
-}
-.Edit_item_size{
   width: 8%;
   height: 8%;
 }
 
+.Edit_menu_img{
+  width: 90%;
+  height: 90%;
+}
+
 .Edit_tree_item{
   position: relative;
+  border: yellow;
+}
+.decoration{
+  position: absolute;
+}
+.Menu{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 20%;
+  left: 10%;
+}
+.Edit_menu_open{
+  width:50%;
+  height: 100%;
+  left: 0;
+  background: #f1f8ff;
+  border: dashed 2px #668ad8;
+  border-radius: 8px;
 }
 
-.items_before{
-  position: absolute;
-  background-color: #FF99CC;
-  color:black;
-  text-orientation: upright;
-  font-size: 15%;
-  top: 40%;
-  left: 5%;
-  width: 15%;
-  height: 25%;
+.Edit_menu_close{
+  width: 0;
+  height: 0;
+  display: none;
 }
-.items_after{
-  position: absolute;
-  background-color: #FF99CC;
-  color:black;
-  text-orientation: upright;
-  font-size: 15%;
-  top: 40%;
-  left: 90%;
-  width: 15%;
-  height: 25%;
+.Edit_itembox{
+  list-style-type: none;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
+.Edit_itembox li{
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+}
+
+.MenuButton_before{
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: 17%;
+}
+
+.MenuButton_after{
+  top: 15%;
+  left: 45%;
+  width: 8%;
+  height: 17%;
+}
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+}*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
