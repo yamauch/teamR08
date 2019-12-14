@@ -18,15 +18,7 @@ var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,
 var SaveImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
 var MenuImages = new Array(SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton);
 
-/*
-<button onClick = { () => click_recieve(11)}>
-            <li><img src={SaveButton} className="Edit_menu_img"></img></li>
-            </button>
-                        <button onClick = {() => click_recieve(12)}>
-            <li><img src={SaveButton} className="Edit_menu_img"></img></li>
-            </button>
-            <li><img src={SaveButton} className="Edit_menu_img"></img></li>
-            */
+
 function Edit(){
   
   const[menucheck,setCheck] = React.useState(false);//メニューのオンオフを切り替えるboolean
