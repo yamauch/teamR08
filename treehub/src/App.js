@@ -12,7 +12,6 @@ import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 
 var images = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-var treeImage = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
 function App(){
   return(
     <div className="App">
@@ -35,18 +34,52 @@ function Edit(){
   
   const[menucheck,setCheck] = React.useState(false);
   const [image_state,getImage] = React.useState(toumei);
-  const [treeImage,setImage] = React.useState(Array(10).fill(toumei));
+  const [top,setTop] = React.useState(toumei);
+  const [firstL,setFL] = React.useState(toumei);
+  const [firstR,setFR] = React.useState(toumei);
+  const [secondL,setSL] = React.useState(toumei);
+  const [secondM,setSM] = React.useState(toumei);
+  const [secondR,setSR] = React.useState(toumei);
+  const [bottomL,setBL] = React.useState(toumei);
+  const [bottomML,setBML] = React.useState(toumei);
+  const [bottomMR,setBMR] = React.useState(toumei);
+  const [bottomR,setBR] = React.useState(toumei);
   
   function click_recieve(i) {//受け取りの関数。iが配列の番号
     getImage(images[i]);
     console.log(image_state);
   }
   
-  function click_send(i){//渡すときの関数。
-    treeImage[i] = image_state;
-    setImage(treeImage[i]);
+  function top_send(){//渡すときの関数。
+    setTop(image_state);
   }
-
+  function firstL_send(){
+    setFL(image_state);
+  }
+  function firstR_send(){
+    setFR(image_state);
+  }
+  function secondL_send(){
+    setSL(image_state);
+  }
+  function secondM_send(){
+    setSM(image_state);
+  }
+  function secondR_send(){
+    setSR(image_state);
+  }
+  function bottomL_send(){
+    setBL(image_state);
+  }
+  function bottomML_send(){
+    setBML(image_state);
+  }
+  function bottomMR_send(){
+    setBMR(image_state);
+  }
+  function bottomR_send(){
+    setBR(image_state);
+  }
   function menuChange(){
     setCheck(!menucheck);
   }
@@ -86,20 +119,36 @@ function Edit(){
     <section className="Edit_right">
       <div className="Edit_tree_item">
         <img src={tree}className="Edit_img_tree"></img>
-        <button onClick = { () =>click_send(0)}>
-        <img src={treeImage[0]}className="Edit_item_size Edit_item1"></img>
+        <button onClick = {top_send}>
+          <img src={top}className="Edit_item_size Edit_item1"></img>
         </button>
-        <button onClick = {() => click_send(1)}>
-        <img src={treeImage[1]}className="Edit_item_size Edit_item2"></img>
+        <button onClick = {firstL_send}>
+          <img src={firstL}className="Edit_item_size Edit_item2"></img>
         </button>
-        <img src={images[10]}className="Edit_item_size Edit_item3"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item4"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item5"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item6"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item7"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item8"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item9"></img>
-        <img src={images[10]}className="Edit_item_size Edit_item10"></img>
+        <button onClick = {firstR_send}>
+          <img src={firstR}className="Edit_item_size Edit_item3"></img>
+        </button>
+        <button onClick = {secondL_send}>
+          <img src={secondL}className="Edit_item_size Edit_item4"></img>
+        </button>
+        <button onClick = {secondM_send}>
+          <img src={secondM}className="Edit_item_size Edit_item5"></img>
+        </button>
+        <button onClick = {secondR_send}>
+          <img src={secondR}className="Edit_item_size Edit_item6"></img>
+        </button>
+        <button onClick = {bottomL_send}>
+          <img src={bottomL}className="Edit_item_size Edit_item7"></img>
+        </button>
+        <button onClick = {bottomML_send}>
+          <img src={bottomML}className="Edit_item_size Edit_item8"></img>
+        </button>
+        <button onClick = {bottomMR_send}>
+          <img src={bottomMR}className="Edit_item_size Edit_item9"></img>
+        </button>
+        <button onClick = {bottomR_send}>
+          <img src={bottomR}className="Edit_item_size Edit_item10"></img>
+        </button>
       </div>
     </section>
     </>
