@@ -1,25 +1,16 @@
 .App {
   text-align: center;
 }
-.Home_EditBurron {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  color: #FFF;
-  background: #00bcd4;
-  transition: .4s;
-}
-
-.Home_EditBurron:hover {
-  background: #1ec7bb;
+.EditHeader{
+  background-image: url(./images/EditBack.jpg);
 }
 h1 {
+  background-color: azure;
   width: 40%;
   left: 30%;
   position: relative;
   padding: 0.25em 1em;
+  margin: 0;
   border: solid 2px black;
   border-radius: 3px 0 3px 0;
 }
@@ -31,6 +22,7 @@ h1:before, h1:after {
   height: 10px;
   border: solid 2px black;
   border-radius: 50%;
+  background-color: azure;
 }
 
 h1:after {
@@ -41,13 +33,18 @@ h1:before {
   bottom:-12px;
   right:-12px;
 }
+
 .Edit_left{
+  background-image: url(./images/EditBack.jpg);
+  background-size: 100%;
   width: 50%;
   height: 100%;
   float: left;
 }
 
 .Edit_right{
+  background-image: url(./images/EditBack.jpg);
+  background-size: 100%;
   width: 50%;
   height: 100%;
   float: right;
@@ -58,79 +55,100 @@ h1:before {
 
 .Edit_img_tree{
   text-align: center;
-   width: 60%;
-    height: 100%;
+   width: 70%;
+    height: 90%;
 }
 
 .Edit_item1{
   position: absolute;
   top: 25%;
-  left: 46%;
-  width: 8%;
-  height: 8%;
+  left: 45%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item2{
   position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 8%;
-  height: 8%;
+  top: 42%;
+  left: 37%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item3{
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 52%;
-  width: 8%;
-  height: 8%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item4{
   position: absolute;
-  top:55%;
-  left:34%;
-  width: 8%;
-  height: 8%;
+  top:51%;
+  left:32%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item5{
   position: absolute;
-  top:55%;
-  left:46%;
-  width: 8%;
-  height: 8%;
+  top:54%;
+  left:45%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item6{
   position: absolute;
-  top:55%;
-  left:58%;
-  width: 8%;
-  height: 8%;
+  top:56%;
+  left:59%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item7{
   position: absolute;
-  top:70%;
-  left:28%;
-  width: 8%;
-  height: 8%;
+  top:62%;
+  left:30%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item8{
   position: absolute;
   top:70%;
-  left:40%;
-  width: 8%;
-  height: 8%;
+  left:41%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item9{
   position: absolute;
-  top:70%;
+  top:65%;
   left:52%;
-  width: 8%;
-  height: 8%;
+  width: 10%;
+  height: 7%;
 }
 .Edit_item10{
   position: absolute;
-  top:70%;
-  left:64%;
-  width: 8%;
-  height: 8%;
+  top:80%;
+  left:22%;
+  width: 10%;
+  height: 7%;
+}
+.Edit_item11{
+  position: absolute;
+  top:83%;
+  left:46%;
+  width: 10%;
+  height: 7%;
+}
+.Edit_item12{
+  position: absolute;
+  top:74%;
+  left:57%;
+  width: 10%;
+  height: 7%;
+}
+.Edit_item13{
+  position: absolute;
+  top:87%;
+  left:68%;
+  width: 10%;
+  height: 7%;
 }
 
 .Edit_menu_img{
@@ -140,7 +158,6 @@ h1:before {
 
 .Edit_tree_item{
   position: relative;
-  border: yellow;
 }
 .decoration{
   position: absolute;
@@ -151,13 +168,13 @@ h1:before {
   flex-wrap: wrap;
   width: 100%;
   top: 20%;
-  left: 10%;
+  left: 8%;
 }
 .Edit_menu_open{
   width:50%;
   height: 100%;
   left: 0;
-  background: #f1f8ff;
+  background-color: white;
   border: dashed 2px #668ad8;
   border-radius: 8px;
 }
@@ -171,7 +188,6 @@ h1:before {
   list-style-type: none;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }

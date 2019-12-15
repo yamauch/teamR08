@@ -1,4 +1,4 @@
- 
+import {firebaseDb} from './firebase'
 import React, { Component } from 'react';
 import './App.css';
 import { RSA_PKCS1_OAEP_PADDING } from 'constants';
@@ -11,7 +11,9 @@ import jk from './images/jk.png';
 import toumei from './images/toumei.png';
 import { array, string } from 'prop-types';
 import MenuButton from './images/MenuButton.jpg';
-import SaveButton from './images/SaveButton.jpg';
+import SaveButton from './images/SaveButton.png';
+import EditBack from './images/EditBack.jpg';
+
 import bell from './images/bell.png';
 import flurt from './images/flurt.png';
 import lease from './images/lease.png';
@@ -20,11 +22,12 @@ import snowman from './images/snowman.png';
 import socks from './images/socks.png';
 import present from './images/present.png';
 import belllease from './images/belllease.png';
-
-
-var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
-var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
 var MenuImages = new Array(bell,flurt,lease,santahat,snowman,socks,present,belllease,SaveButton,SaveButton);
+
+var DataImages = new Array(ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,);
+var images = new Array(SaveButton,SaveButton,SaveButton,ccc,ccc,ccc,ccc,ccc,ccc,ccc,toumei,joucho,jk);
+var MenuImages = new Array(snowman,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton,SaveButton)
+
 
 
 function Edit(){
@@ -52,6 +55,7 @@ function Edit(){
   
   function top_send(){//渡すときの関数。
     setTop(image_state);
+    //SaveImage.state.top = image_state;
   }
   function firstL_send(){
     setFL(image_state);
@@ -84,9 +88,12 @@ function Edit(){
     setCheck(!menucheck);
   }
 
+ 
   return(
     <>
-    <h1>TreeHub</h1>
+    <div className="EditHeader">
+      <h1>TreeHub</h1>
+    </div>
     <section className="Edit_left">
       <div className="Edit_tree_item">{/*position:relation*/}
         <img src={tree}className="Edit_img_tree"></img>
@@ -155,4 +162,20 @@ function App(){
 }
 export default App;
 
-
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div className="app">
+//         <section className="hero container is-info">
+//           <div className="hero-body">
+//             <h1 className="title">Treehub</h1>
+//           </div>
+//         </section>
+//         <section className="container">
+//           <SaveImage />
+//           <TreeDecoList />
+//         </section>
+//       </div>
+//     );
+//   }
+// }
